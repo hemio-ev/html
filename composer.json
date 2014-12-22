@@ -1,0 +1,22 @@
+{
+    "name": "hemio/html",
+    "type": "library",
+    "description": "Object oriented HTML5 library",
+    "keywords": ["html"],
+    "homepage": "http://github.com/qua-bla/html",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Michael Herold",
+            "email": "quabla@hemio.de"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "hemio\\html\\": "src"
+        }
+    }
+}
