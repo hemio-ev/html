@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 chdir('../');
 require 'vendor/autoload.php';

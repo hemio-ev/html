@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 namespace hemio\html;
 chdir('../');

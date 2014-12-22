@@ -4,7 +4,7 @@
     "description": "Object oriented HTML5 library",
     "keywords": ["html"],
     "homepage": "http://github.com/qua-bla/html",
-    "license": "GPL",
+    "license": "GPL-3.0+",
     "authors": [
         {
             "name": "Michael Herold",
