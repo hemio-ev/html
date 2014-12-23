@@ -33,7 +33,7 @@ trait DefaultElementContent {
     /**
      * Returns always true
      * 
-     * @param \html\Interface_\HtmlCode $child
+     * @param \hemio\html\Interface_\HtmlCode $child
      * @return boolean
      */
     public function isValidChild(\hemio\html\Interface_\HtmlCode $child) {

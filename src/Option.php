@@ -32,8 +32,8 @@ class Option extends Abstract_\ElementContent implements Interface_\ContentModel
 
     /**
      * 
-     * @param \html\Text $string
-     * @return \html\Text
+     * @param Interface_\ContentModelText $string
+     * @return Interface_\ContentModelText
      */
     public function addChild(Interface_\ContentModelText $string) {
         $this->addChildInternal($string);

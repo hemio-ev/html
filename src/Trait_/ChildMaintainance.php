@@ -84,8 +84,8 @@ trait ChildMaintainance {
 
     /**
      * 
-     * @param \html\Interface_\HtmlCode $child
-     * @return \html\Interface_\HtmlCode
+     * @param \hemio\html\Interface_\HtmlCode $child
+     * @return \hemio\html\Interface_\HtmlCode
      */
     protected function addChildInternal(\hemio\html\Interface_\HtmlCode $child) {
         $this[] = $child;
@@ -94,7 +94,7 @@ trait ChildMaintainance {
 
     /**
      * 
-     * @param \html\Interface_\HtmlCode $child
+     * @param \hemio\html\Interface_\HtmlCode $child
      */
     protected function gainChild(\hemio\html\Interface_\HtmlCode $child) {
         if ($child instanceof \hemio\html\Abstract_\Element)

@@ -31,7 +31,7 @@ class Html extends Abstract_\ElementContent {
 
     /**
      * 
-     * @param \html\Head $objHead
+     * @param Head $objHead
      */
     public function setHead(Head $objHead) {
         $this['_HEAD'] = $objHead;
@@ -47,7 +47,7 @@ class Html extends Abstract_\ElementContent {
 
     /**
      * 
-     * @param \html\Body $objBody
+     * @param Body $objBody
      */
     public function setBody(Body $objBody) {
         $this['_BODY'] = $objBody;
