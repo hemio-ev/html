@@ -33,25 +33,4 @@ class Optgroup extends Abstract_\ElementContent implements Interface_\ContentMod
         return $child instanceof Option;
     }
 
-    //public $arrOptions = array();
-    /*
-      public function addOption($strValue, $strText) {
-      if (!isset($this->arrOptions[$strValue])) {
-      return $this->arrOptions[$strValue] =
-      new Option($strValue, $strText);
-      } else {
-      die('option allready exists');
-      }
-      }
-
-      public function __toString() {
-      foreach ($this->arrOptions as $objOption) {
-      // TODO: selected für select ungelöst
-      //$objOption->setAttribute('selected', 'selected');
-      $this->objFormElem->addChild($objOption);
-      }
-
-      return parent::__toString();
-      }
-     */
 }

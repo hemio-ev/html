@@ -8,7 +8,7 @@ namespace hemio\html\Interface_;
  * 
  * @author Michael Herold <quabla@hemio.de>
  */
-interface MaintainsChilds extends \ArrayAccess , \RecursiveIterator, \Countable,
+interface MaintainsChilds extends \ArrayAccess, \RecursiveIterator, \Countable,
  MaintainsAppendages {
 
     /**

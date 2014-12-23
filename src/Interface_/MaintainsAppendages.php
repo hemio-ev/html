@@ -20,7 +20,7 @@ interface MaintainsAppendages {
      * @return mixed Inherited Appendage
      */
     public function getInheritableAppendage($key);
-    
+
     /**
      * 
      * @param string $key

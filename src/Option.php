@@ -18,13 +18,12 @@ class Option extends Abstract_\ElementContent implements Interface_\ContentModel
 
     /**
      * 
-     * @param type $strValue
-     * @param type $strText
-     * @todo text typehinting
+     * @param string $strValue
+     * @param Interface_\ContentModelText $objText
      */
-    function __construct($strValue, Interface_\ContentModelText $strText) {
+    function __construct($strValue, Interface_\ContentModelText $objText) {
         $this->setAttribute('value', $strValue);
-        $this->addChild($strText);
+        $this->addChild($objText);
     }
 
     public function isValidChild(Interface_\HtmlCode $child) {
