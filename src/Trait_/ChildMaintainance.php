@@ -140,4 +140,13 @@ trait ChildMaintainance {
         return key($this->arrChilds);
     }
 
+    /**
+     * Existence usually ensured via (@link \hemio\html\Interface_\MaintainsChilds)
+     */
+    abstract public function isValidChild(\hemio\html\Interface_\HtmlCode $child);
+
+    /**
+     * Existence usually ensured via (@link \hemio\html\Interface_\MaintainsAppendages)
+     */
+    abstract public function getInheritableAppendages();
 }
