@@ -1,0 +1,6 @@
+destination: docs
+
+source:
+ - src
+
+title: "hemio/html"
