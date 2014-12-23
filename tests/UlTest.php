@@ -8,6 +8,9 @@ use hemio\html\Li;
 
 class UlTest extends Helpers {
 
+    /**
+     * @param integer $n
+     */
     private function largeDocument($n) {
         $doc = new Document(new String('My Title'));
         $html = $doc->getHtml();
