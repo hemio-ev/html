@@ -33,7 +33,7 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
     /**
      * sets an antribute
      * @param string $strKey
-     * @param mixed $varValue
+     * @param mixed $mixValue
      */
     public function setAttribute($strKey, $mixValue) {
         if ($mixValue === true)
@@ -74,7 +74,7 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
 
     /**
      * @param string $strKey
-     * @param mixed $varValue
+     * @param mixed $mixValue
      */
     public function setCssProperty($strKey, $mixValue) {
         $this->arrCssPropertys[$strKey] = $mixValue;
