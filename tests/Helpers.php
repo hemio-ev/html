@@ -26,7 +26,6 @@ class Helpers extends PHPUnit_Framework_TestCase {
         $actualString = (string) $objHtml;
         $actual->loadXML($actualString);
 
-        echo $actualString;
         $this->assertEqualXMLStructure($expected->documentElement, $actual->documentElement, true);
     }
 

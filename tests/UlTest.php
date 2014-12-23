@@ -6,31 +6,27 @@ use hemio\html\P;
 use hemio\html\Ul;
 use hemio\html\Li;
 
-class SpeedTest extends PHPUnit_Framework_TestCase {
-
-    public function test0() {
-        $out = (string) (new Document(new String('My Title')));
-    }
+class UlTest extends Helpers {
 
     public function test1() {
         $doc = new Document(new String('My Title'));
         $html = $doc->getHtml();
         $body = $html->getBody();
 
-        for ($i = 0; $i < 200; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $p = new P;
             $p->addChild(new String('test'));
             $body->addChild($p);
         }
 
-        for ($i = 0; $i < 200; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $ul = new Ul();
             $li = $ul->addChild(new Li);
             $li->addChild(new String('test'));
             $body->addChild($ul);
         }
 
-        $out = (string) $doc;
+        $this->_assertEqualsXmlFile($doc, 'ul100.html');
     }
 
     public function test2() {
@@ -52,7 +48,7 @@ class SpeedTest extends PHPUnit_Framework_TestCase {
             $body->addChild($ul);
         }
 
-        $out = (string) $doc;
+        $this->_assertEqualsXmlFile($doc, 'ul2000.html');
     }
 
 }
