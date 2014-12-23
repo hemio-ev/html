@@ -13,5 +13,8 @@ namespace hemio\html\Interface_;
  */
 interface ContentModelText extends ContentModel {
 
+    /**
+     * @return string
+     */
     public function __toString();
 }

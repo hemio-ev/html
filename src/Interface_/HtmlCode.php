@@ -14,5 +14,8 @@ interface HtmlCode {
      */
     public function __toString();
     
+    /**
+     * @return string
+     */
     public function describe();
 }

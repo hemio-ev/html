@@ -17,7 +17,7 @@ class Optgroup extends Abstract_\ElementContent implements Interface_\ContentMod
 
     /**
      * 
-     * @param \html\Option $option
+     * @param Option $option
      * @return Option
      */
     public function addChild(Option $option) {
@@ -26,7 +26,7 @@ class Optgroup extends Abstract_\ElementContent implements Interface_\ContentMod
 
     /**
      * 
-     * @param \html\Interface_\HtmlCode $child
+     * @param Interface_\HtmlCode $child
      * @return boolean
      */
     public function isValidChild(Interface_\HtmlCode $child) {
