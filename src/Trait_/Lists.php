@@ -6,8 +6,8 @@ trait Lists {
 
     /**
      * 
-     * @param \html\Li $child
-     * @return \html\Li
+     * @param \hemio\html\Li $child
+     * @return \hemio\html\Li
      */
     public function addChild(\hemio\html\Li $child) {
         $this->addChildInternal($child);
@@ -18,7 +18,7 @@ trait Lists {
      * Adds <<li>> tag containing a given entry
      * 
      * @param Interface_\HtmlCode $withEntry The contained entry
-     * @return html\Li
+     * @return \hemio\html\Li
      */
     public function addEntryWith(\hemio\html\Interface_\HtmlCode $withEntry) {
         $li = new \hemio\html\Li();
@@ -28,8 +28,8 @@ trait Lists {
 
     /**
      * 
-     * @param \html\Interface_\HtmlCode $header
-     * @return \html\Ul
+     * @param \hemio\html\Interface_\HtmlCode $header
+     * @return \hemio\html\Ul
      */
     public function addSubUl(\hemio\html\Interface_\HtmlCode $header) {
         $li = $this->addChild(new \hemio\html\Li);
@@ -41,8 +41,8 @@ trait Lists {
 
     /**
      * 
-     * @param \html\Interface_\HtmlCode $header
-     * @return \html\Ol
+     * @param \hemio\html\Interface_\HtmlCode $header
+     * @return \hemio\html\Ol
      */
     public function addSubOl(\hemio\html\Interface_\HtmlCode $header) {
         $li = $this->addChild(new \hemio\html\Li);

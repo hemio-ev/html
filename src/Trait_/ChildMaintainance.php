@@ -117,9 +117,6 @@ trait ChildMaintainance {
     }
 
     public function hasChildren() {
-        if (!($this->current() instanceof \RecursiveIterator)) {
-            //echo ' -noit:' . $this->current()->describe() . '- '.PHP_EOL;
-        }
         return $this->current() instanceof \RecursiveIterator;
     }
 
