@@ -21,7 +21,7 @@ class Document implements Interface_\HtmlCode, Interface_\MaintainsChilds {
 
     /**
      * 
-     * @return \html\Html
+     * @return Html
      */
     public function getHtml() {
         return $this['_HTML'];
