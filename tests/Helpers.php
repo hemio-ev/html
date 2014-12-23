@@ -21,7 +21,7 @@
 class Helpers extends PHPUnit_Framework_TestCase {
 
     protected function _assertEqualsXmlFile(hemio\html\Interface_\HtmlCode $objHtml, $strFile) {
-        $expected = DOMDocument;
+        $expected = new DOMDocument;
         $expected->load(__DIR__ . DIRECTORY_SEPARATOR . $strFile);
         $actual = new DOMDocument;
         $actualString = (string) $objHtml;
