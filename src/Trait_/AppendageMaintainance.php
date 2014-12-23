@@ -9,9 +9,8 @@ trait AppendageMaintainance {
 
     /**
      * @var array
-     * @todo protected
      */
-    public $arrInheritableAppendages = [];
+    protected $arrInheritableAppendages = [];
 
     /**
      * 
@@ -49,6 +48,13 @@ trait AppendageMaintainance {
      */
     public function existsInheritableAppendage($key) {
         return $this->getInheritableAppendage($key) !== null;
+    }
+
+    /**
+     * @return array All appendages with keys
+     */
+    public function getInheritableAppendages() {
+        return $this->arrInheritableAppendages;
     }
 
 }

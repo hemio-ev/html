@@ -27,4 +27,9 @@ interface MaintainsAppendages {
      * @return boolean Existance of appendage
      */
     public function existsInheritableAppendage($key);
+
+    /**
+     * @return array All appendages with their keys
+     */
+    public function getInheritableAppendages();
 }

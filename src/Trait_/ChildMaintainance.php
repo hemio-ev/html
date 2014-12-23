@@ -101,7 +101,7 @@ trait ChildMaintainance {
             $child->setParent($this);
 
         if ($child instanceof \hemio\html\Interface_\MaintainsAppendages)
-            foreach ($this->arrInheritableAppendages as $appKey => $appValue)
+            foreach ($this->getInheritableAppendages() as $appKey => $appValue)
                 if ($child->getInheritableAppendage($appKey) === null)
                     $child->addInheritableAppendage($appKey, $appValue);
     }
