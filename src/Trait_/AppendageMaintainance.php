@@ -21,9 +21,9 @@ trait AppendageMaintainance {
     public function addInheritableAppendage($key, $appendage) {
         $this->arrInheritableAppendages[$key] = $appendage;
 
-        if ($this instanceof Interface_\MaintainsChilds) {
+        if ($this instanceof \hemio\html\Interface_\MaintainsChilds) {
             foreach ($this as $child) {
-                if ($child instanceof Interface_\MaintainsAppendages) {
+                if ($child instanceof \hemio\html\Interface_\MaintainsAppendages) {
                     $child->addInheritableAppendage($key, $appendage);
                 }
             }
@@ -37,8 +37,9 @@ trait AppendageMaintainance {
      */
     public function getInheritableAppendage($key) {
         if (array_key_exists($key, $this->arrInheritableAppendages))
-                return $this->arrInheritableAppendages[$key];
-        else return null;
+            return $this->arrInheritableAppendages[$key];
+        else
+            return null;
     }
 
     /**

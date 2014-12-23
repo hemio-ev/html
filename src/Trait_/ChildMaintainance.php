@@ -53,14 +53,15 @@ trait ChildMaintainance {
      */
     public function offsetSet($offset, $value) {
         if ($this->isValidChild($value)) {
-            if ($offset === null) $this->arrChilds[] = $value;
-            else $this->arrChilds[$offset] = $value;
+            if ($offset === null)
+                $this->arrChilds[] = $value;
+            else
+                $this->arrChilds[$offset] = $value;
 
             $this->gainChild($value);
         } else {
             trigger_error('An instance of `' . get_class($value) .
-                    '` is no valid child for `' . get_class() . '`',
-                    E_USER_WARNING);
+                    '` is no valid child for `' . get_class() . '`', E_USER_WARNING);
         }
     }
 
@@ -96,12 +97,13 @@ trait ChildMaintainance {
      * @param \html\Interface_\HtmlCode $child
      */
     protected function gainChild(\hemio\html\Interface_\HtmlCode $child) {
-        if ($child instanceof Abstract_\Element) $child->setParent($this);
+        if ($child instanceof \hemio\html\Abstract_\Element)
+            $child->setParent($this);
 
         if ($child instanceof \hemio\html\Interface_\MaintainsAppendages)
-                foreach ($this->arrInheritableAppendages as $appKey => $appValue)
-                    if ($child->getInheritableAppendage($appKey) === null)
-                        $child->addInheritableAppendage($appKey, $appValue);
+            foreach ($this->arrInheritableAppendages as $appKey => $appValue)
+                if ($child->getInheritableAppendage($appKey) === null)
+                    $child->addInheritableAppendage($appKey, $appValue);
     }
 
     public function __clone() {

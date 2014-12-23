@@ -130,9 +130,9 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
     /**
      * Sets the parent HTML element.
      * Will be called while iterrating through __toString()
-     * @param Abstract_\Element $objParent
+     * @param \hemio\html\Interface_\MaintainsChilds $objParent
      */
-    public function setParent(Interface_\MaintainsChilds $objParent) {
+    public function setParent(\hemio\html\Interface_\MaintainsChilds $objParent) {
         $this->objParent = $objParent;
     }
 
