@@ -11,8 +11,6 @@ namespace hemio\html;
  */
 class Link extends Abstract_\ElementEmpty implements Interface_\ContentModelMetadata {
 
-    use Trait_\DefaultElementContent;
-
     public static function tagName() {
         return 'link';
     }
