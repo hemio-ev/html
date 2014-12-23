@@ -43,4 +43,24 @@ class AppendagesTest extends Helpers {
         $this->assertEquals('-lsk3jfl#1-', $div->getInheritableAppendage('axkdw_sda2'));
     }
 
+    public function testBasicExisting() {
+        $doc = new hemio\html\Document(new hemio\html\String(''));
+        $doc->addInheritableAppendage('key', 'overwritten-value');
+        $div = new \hemio\html\Div;
+        $div->addInheritableAppendage('key', 'existing-value');
+        $doc->getHtml()->getBody()->addChild($div);
+
+        $this->assertEquals('existing-value', $div->getInheritableAppendage('key'));
+    }
+
+    public function testLateAddedExisting() {
+        $doc = new hemio\html\Document(new hemio\html\String(''));
+        $div = new \hemio\html\Div;
+        $div->addInheritableAppendage('key', 'existing-value');
+        $doc->getHtml()->getBody()->addChild($div);
+        $doc->addInheritableAppendage('key', 'overwritten-value');
+
+        $this->assertEquals('existing-value', $div->getInheritableAppendage('key'));
+    }
+
 }

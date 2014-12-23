@@ -102,8 +102,7 @@ trait ChildMaintainance {
 
         if ($child instanceof \hemio\html\Interface_\MaintainsAppendages)
             foreach ($this->getInheritableAppendages() as $appKey => $appValue)
-                if ($child->getInheritableAppendage($appKey) === null)
-                    $child->addInheritableAppendage($appKey, $appValue);
+                $child->leaveInheritableAppendage($appKey, $appValue);
     }
 
     public function __clone() {
