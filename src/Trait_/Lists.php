@@ -4,8 +4,6 @@ namespace hemio\html\Trait_;
 
 trait Lists {
 
-    abstract public function addChildInternal(\hemio\html\Interface_\HtmlCode $child);
-
     /**
      * 
      * @param \hemio\html\Li $child
