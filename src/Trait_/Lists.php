@@ -58,4 +58,8 @@ trait Lists {
         return $child instanceof \hemio\html\Li;
     }
 
+    /**
+     * Used by addChild, therefore has to be defined here
+     */
+    abstract public function addChildInternal(\hemio\html\Interface_\HtmlCode $child);
 }

@@ -8,8 +8,8 @@ namespace hemio\html;
  */
 class Document implements Interface_\HtmlCode, Interface_\MaintainsChilds {
 
-    use Trait_\ChildMaintainance,
-        Trait_\AppendageMaintainance;
+    use Trait_\AppendageMaintainance,
+         Trait_\ChildMaintainance;
 
     public function __construct(Interface_\ContentModelText $objTitleContent) {
         $this['_HTML'] = new Html($objTitleContent);
@@ -31,8 +31,8 @@ class Document implements Interface_\HtmlCode, Interface_\MaintainsChilds {
         return $child instanceof Html;
     }
 
-    
     public function describe() {
-        return __CLASS__.__NAMESPACE__;
+        return __CLASS__ . __NAMESPACE__;
     }
+
 }
