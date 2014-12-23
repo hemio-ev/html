@@ -7,8 +7,8 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
     use \hemio\html\Trait_\AppendageMaintainance;
 
     /**
-     * parent element in DOM
-     * @var Abstract_\ElementContent
+     * parent element in DOM or something similar
+     * @var \hemio\html\Interface_\MaintainsChilds
      */
     public $objParent = null;
 

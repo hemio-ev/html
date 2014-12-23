@@ -23,13 +23,25 @@ class Head extends Abstract_\ElementContent {
         $objCharset->setAttribute('charset', 'utf-8');
     }
 
+    /**
+     * 
+     * @param string $strName
+     * @param string $strContent
+     * @return \hemio\html\Meta
+     */
     function addMeta($strName, $strContent) {
-        $objMeta = $this->addChild(new Meta);
+        $objMeta = new Meta();
+        $this->addChild($objMeta);
+
         $objMeta->setAttribute('name', $strName);
         $objMeta->setAttribute('content', $strContent);
         return $objMeta;
     }
 
+    /**
+     * 
+     * @param string $strFilename
+     */
     function addCssFile($strFilename) {
         $link = new Link();
         $link->setAttribute('rel', 'stylesheet');
@@ -39,6 +51,11 @@ class Head extends Abstract_\ElementContent {
         $this['_CSS_' . $strFilename] = $link;
     }
 
+    /**
+     * 
+     * @param type $url
+     * @todo URL
+     */
     public function setBaseUrl($url) {
         $base = new Base();
         $base->setAttribute('href', $url);
