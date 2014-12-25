@@ -17,7 +17,7 @@ trait Lists {
     /**
      * Adds <<li>> tag containing a given entry
      * 
-     * @param Interface_\HtmlCode $withEntry The contained entry
+     * @param \hemio\html\Interface_\HtmlCode $withEntry The contained entry
      * @return \hemio\html\Li
      */
     public function addEntryWith(\hemio\html\Interface_\HtmlCode $withEntry) {

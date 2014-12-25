@@ -19,6 +19,7 @@ interface MaintainsAppendages {
      * 
      * @param string $key
      * @param mixed $appendage
+     * @return void
      */
     public function leaveInheritableAppendage($key, $appendage);
 
