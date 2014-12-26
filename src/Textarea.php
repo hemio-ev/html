@@ -9,7 +9,7 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/
  */
-class Textarea extends Abstract_\ElementContent implements Interface_\InputElement {
+class Textarea extends Abstract_\ElementContent implements Interface_\FormControl {
 
     use Trait_\DefaultElementContent;
 
