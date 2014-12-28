@@ -14,9 +14,9 @@ abstract class ElementEmpty extends Element {
      */
     public function __toString() {
         return '<' .
-            static::tagName() .
-            $this->getFormattedElementAttributes() .
-            ' />';
+                static::tagName() .
+                $this->getFormattedElementAttributes() .
+                ' />';
     }
 
 }

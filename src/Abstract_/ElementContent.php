@@ -26,7 +26,7 @@ abstract class ElementContent extends Element implements \hemio\html\Interface_\
                 . $strNewLine;
 
         foreach ($this as $child)
-            $strReturn .= (string) $child;
+            $strReturn .= $child->__toString();
 
         $strReturn .=
                 $strNewLine .

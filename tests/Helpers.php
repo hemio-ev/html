@@ -32,7 +32,7 @@ class Helpers extends PHPUnit_Framework_TestCase {
         $path = __DIR__ . DIRECTORY_SEPARATOR . $strFile;
 
         $actual = new DOMDocument;
-        $actualString = (string) $objHtml;
+        $actualString =  $objHtml->__toString();
         $actual->loadXML($actualString);
 
         if (!file_exists($path))
