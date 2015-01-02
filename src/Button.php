@@ -8,7 +8,7 @@ namespace hemio\html;
  * @since 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-button-element
  */
-class Button extends Abstract_\ElementContent implements Interface_\FormControl {
+class Button extends Abstract_\ElementContent implements Interface_\Submittable {
 
     use Trait_\DefaultElementContent;
 

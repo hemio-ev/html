@@ -9,7 +9,7 @@ namespace hemio\html;
  * @since 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-input-element
  */
-class Input extends Abstract_\ElementEmpty implements Interface_\FormControl {
+class Input extends Abstract_\ElementEmpty implements Interface_\Submittable {
 
     /**
      * 
