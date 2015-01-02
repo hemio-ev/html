@@ -5,7 +5,7 @@ namespace hemio\html;
 /**
  * The <code>fieldset</code> element represents a set of form controls grouped under a
   common name.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-fieldset-element
  */

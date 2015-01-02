@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The <code>dd</code> element represents a description or value.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/grouping-content.html#the-dt-element
  * @todo check prev. element dt

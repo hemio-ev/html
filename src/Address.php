@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The <code>address</code> element represents contact information.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/sections.html#the-address-element
  */

@@ -3,9 +3,9 @@
 namespace hemio\html;
 
 /**
- * The <code>samp</code> element represents (sample) output from a program or 
+ * The <code>samp</code> element represents (sample) output from a program or
  * computing system.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/text-level-semantics.html#the-samp-element
  */

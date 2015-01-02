@@ -18,7 +18,7 @@ class String implements Interface_\ContentModelText {
         $this->objParent = $objParent;
     }
 
-    
+
     public function describe() {
         return 'STRING';
     }

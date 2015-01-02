@@ -5,7 +5,7 @@ namespace hemio\html;
 /**
  * The <code>optgroup</code> element represents a group of option elements with
  *  a common label.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-optgroup-element
  */
@@ -16,7 +16,7 @@ class Optgroup extends Abstract_\ElementContent implements Interface_\ContentMod
     }
 
     /**
-     * 
+     *
      * @param Option $option
      * @return Option
      */
@@ -25,7 +25,7 @@ class Optgroup extends Abstract_\ElementContent implements Interface_\ContentMod
     }
 
     /**
-     * 
+     *
      * @param Interface_\HtmlCode $child
      * @return boolean
      */

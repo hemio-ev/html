@@ -6,7 +6,7 @@ namespace hemio\html;
  * The <code>option</code> element represents an option in a select control, or an option
   in a labelled set of options grouped together in an optgroup, or an option
   among the list of suggestions in a datalist.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-option-element
  */
@@ -17,7 +17,7 @@ class Option extends Abstract_\ElementContent implements Interface_\ContentModel
     }
 
     /**
-     * 
+     *
      * @param string $strValue
      * @param Interface_\ContentModelText $objText
      */
@@ -31,7 +31,7 @@ class Option extends Abstract_\ElementContent implements Interface_\ContentModel
     }
 
     /**
-     * 
+     *
      * @param Interface_\ContentModelText $string
      * @return Interface_\ContentModelText
      */

@@ -24,7 +24,7 @@
 class Helpers extends PHPUnit_Framework_TestCase {
 
     /**
-     * 
+     *
      * @param hemio\html\Interface_\HtmlCode $objHtml
      * @param string $strFile
      */

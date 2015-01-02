@@ -8,7 +8,7 @@ namespace hemio\html\Interface_;
 interface MaintainsAppendages {
 
     /**
-     * 
+     *
      * @param string $key
      * @param mixed $appendage
      * @return void
@@ -16,7 +16,7 @@ interface MaintainsAppendages {
     public function addInheritableAppendage($key, $appendage);
 
     /**
-     * 
+     *
      * @param string $key
      * @param mixed $appendage
      * @return void
@@ -24,14 +24,14 @@ interface MaintainsAppendages {
     public function leaveInheritableAppendage($key, $appendage);
 
     /**
-     * 
+     *
      * @param string $key
      * @return mixed Inherited Appendage
      */
     public function getInheritableAppendage($key);
 
     /**
-     * 
+     *
      * @param string $key
      * @return boolean Existance of appendage
      */
@@ -43,7 +43,7 @@ interface MaintainsAppendages {
     public function getInheritableAppendages();
 
     /**
-     * 
+     *
      * @param string $key
      * @return boolean
      */

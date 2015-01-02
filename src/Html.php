@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The <code>html</code> element represents the root of a document.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/semantics.html#the-html-element
  */
@@ -22,7 +22,7 @@ class Html extends Abstract_\ElementContent {
     }
 
     /**
-     * 
+     *
      * @return Head
      */
     public function getHead() {
@@ -30,7 +30,7 @@ class Html extends Abstract_\ElementContent {
     }
 
     /**
-     * 
+     *
      * @param Head $objHead
      */
     public function setHead(Head $objHead) {
@@ -38,7 +38,7 @@ class Html extends Abstract_\ElementContent {
     }
 
     /**
-     * 
+     *
      * @return Body
      */
     public function getBody() {
@@ -46,7 +46,7 @@ class Html extends Abstract_\ElementContent {
     }
 
     /**
-     * 
+     *
      * @param Body $objBody
      */
     public function setBody(Body $objBody) {

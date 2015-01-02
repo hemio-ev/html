@@ -40,7 +40,7 @@ abstract class ElementContent extends Element implements \hemio\html\Interface_\
     /**
      * Default assumption is, that an element is not a block element.
      * This might be overwritten by the implementation of a specific element.
-     * 
+     *
      * @return boolean
      */
     public function blnIsBlock() {

@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The <code>td</code> element represents a data cell in a table.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/tabular-data.html#the-td-element
  */

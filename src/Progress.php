@@ -3,9 +3,9 @@
 namespace hemio\html;
 
 /**
- * The <code>progress</code> element represents the completion progress of a 
+ * The <code>progress</code> element represents the completion progress of a
  * task.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-progress-element
  */

@@ -3,7 +3,7 @@
 namespace hemio\html;
 
 /**
- * 
+ *
  *
  */
 class Document implements Interface_\HtmlCode, Interface_\MaintainsChilds {
@@ -20,7 +20,7 @@ class Document implements Interface_\HtmlCode, Interface_\MaintainsChilds {
     }
 
     /**
-     * 
+     *
      * @return Html
      */
     public function getHtml() {

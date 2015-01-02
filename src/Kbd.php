@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The kbd element represents user input.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/text-level-semantics.html#the-kbd-element
  */

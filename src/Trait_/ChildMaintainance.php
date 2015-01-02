@@ -3,11 +3,11 @@
 namespace hemio\html\Trait_;
 
 /**
- * Most required utils to implement elements that can have childs and 
- * containers. Recomended implementation from most of 
+ * Most required utils to implement elements that can have childs and
+ * containers. Recomended implementation from most of
  * {@link MaintainsChilds} requirements.
- * 
- * @uses MaintainsChilds ChildMaintainance is the recommended 
+ *
+ * @uses MaintainsChilds ChildMaintainance is the recommended
  * implementation from most of MaintainsChilds requirements
  * @author Michael Herold <quabla@hemio.de>
  * @todo Cleanup
@@ -21,7 +21,7 @@ trait ChildMaintainance {
     private $arrChilds = array();
 
     /**
-     * 
+     *
      * @return integer
      */
     public function count() {
@@ -29,7 +29,7 @@ trait ChildMaintainance {
     }
 
     /**
-     * 
+     *
      * @param mixed $offset
      * @return boolean
      */
@@ -38,7 +38,7 @@ trait ChildMaintainance {
     }
 
     /**
-     * 
+     *
      * @param mixed $offset
      * @return Interface_\HtmlCode
      */
@@ -47,7 +47,7 @@ trait ChildMaintainance {
     }
 
     /**
-     * 
+     *
      * @param mixed $offset
      * @param Interface_\HtmlCode $value
      */
@@ -66,7 +66,7 @@ trait ChildMaintainance {
     }
 
     /**
-     * 
+     *
      * @param type $offset
      */
     public function offsetUnset($offset) {
@@ -75,7 +75,7 @@ trait ChildMaintainance {
 
     /**
      * Implements iteration
-     * 
+     *
      * @return \Traversable
      */
     public function getIterator() {
@@ -83,7 +83,7 @@ trait ChildMaintainance {
     }
 
     /**
-     * 
+     *
      * @param \hemio\html\Interface_\HtmlCode $child
      * @return \hemio\html\Interface_\HtmlCode
      */
@@ -93,7 +93,7 @@ trait ChildMaintainance {
     }
 
     /**
-     * 
+     *
      * @param \hemio\html\Interface_\HtmlCode $child
      */
     protected function gainChild(\hemio\html\Interface_\HtmlCode $child) {

@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The <code>footer</code> element represents the footer for the section it applies to.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/sections.html#the-footer-element
  */

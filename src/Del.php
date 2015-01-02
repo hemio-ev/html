@@ -3,9 +3,9 @@
 namespace hemio\html;
 
 /**
- * The <code>del</code> element represents a range of text that has been deleted 
+ * The <code>del</code> element represents a range of text that has been deleted
  * from a document.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/edits.html#the-del-element
  */

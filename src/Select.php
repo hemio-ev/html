@@ -5,7 +5,7 @@ namespace hemio\html;
 /**
  * The <code>select</code> element represents a control for selecting among a list of
   options.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-select-element
  */

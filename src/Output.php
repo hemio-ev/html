@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The <code>output</code> element represents the result of a calculation.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-output-element
  */

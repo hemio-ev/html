@@ -3,9 +3,9 @@
 namespace hemio\html;
 
 /**
- * The <code>embed</code> element represents an integration point for external 
+ * The <code>embed</code> element represents an integration point for external
  * content.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/embedded-content-0.html#the-embed-element
  */

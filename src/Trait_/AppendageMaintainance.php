@@ -16,13 +16,13 @@ trait AppendageMaintainance {
      * List of appendages that are explicitly defined on this object. They
      * are not overwritten from appendages from object that are higher
      * in the hierarchy.
-     * 
+     *
      * @var array
      */
     protected $arrIndividualAppendages = [];
 
     /**
-     * 
+     *
      * @param string $key
      * @param mixed $appendage
      */
@@ -32,7 +32,7 @@ trait AppendageMaintainance {
     }
 
     /**
-     * 
+     *
      * @param string $key
      * @param mixed $appendage
      */
@@ -43,7 +43,7 @@ trait AppendageMaintainance {
     }
 
     /**
-     * 
+     *
      * @param string $key
      * @param mixed $appendage
      */
@@ -60,7 +60,7 @@ trait AppendageMaintainance {
     }
 
     /**
-     * 
+     *
      * @param string $key
      * @return null|mixed
      */
@@ -72,7 +72,7 @@ trait AppendageMaintainance {
     }
 
     /**
-     * 
+     *
      * @param string $key
      * @return boolean
      */
@@ -81,7 +81,7 @@ trait AppendageMaintainance {
     }
 
     /**
-     * 
+     *
      * @param string $key
      * @return boolean
      */

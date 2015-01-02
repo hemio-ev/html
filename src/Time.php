@@ -4,8 +4,8 @@ namespace hemio\html;
 
 /**
  * The time element represents its contents, along with a machine-readable form
- * of those contents in the datetime attribute. 
- * 
+ * of those contents in the datetime attribute.
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/text-level-semantics.html#the-time-element
  */
@@ -22,7 +22,7 @@ class Time
 
     /**
      * @url http://php.net/manual/en/function.strftime.php
-     * @var string 
+     * @var string
      */
     protected $timeFormat;
 

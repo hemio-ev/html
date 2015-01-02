@@ -5,7 +5,7 @@ namespace hemio\html;
 /**
  * The <code>tfoot</code> element represents the block of rows that consist of the column
   summaries (footers) for its parent table element.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/tabular-data.html#the-tfoot-element
  */

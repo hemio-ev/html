@@ -5,7 +5,7 @@ namespace hemio\html;
 /**
  * The <code>ul</code> element represents an unordered list of items; that is, a list in
   which changing the order of the items would not change the meaning of list.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/grouping-content.html#the-ul-element
  */

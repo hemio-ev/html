@@ -9,7 +9,7 @@ abstract class ElementEmpty extends Element {
 
     /**
      * Simply gives the <code><tag /></code> element with the defined attributes
-     * 
+     *
      * @return string
      */
     public function __toString() {

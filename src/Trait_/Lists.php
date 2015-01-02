@@ -5,7 +5,7 @@ namespace hemio\html\Trait_;
 trait Lists {
 
     /**
-     * 
+     *
      * @param \hemio\html\Li $child
      * @return \hemio\html\Li
      */
@@ -16,7 +16,7 @@ trait Lists {
 
     /**
      * Adds <<li>> tag containing a given entry
-     * 
+     *
      * @param \hemio\html\Interface_\HtmlCode $withEntry The contained entry
      * @return \hemio\html\Li
      */
@@ -27,7 +27,7 @@ trait Lists {
     }
 
     /**
-     * 
+     *
      * @param \hemio\html\Interface_\HtmlCode $header
      * @return \hemio\html\Ul
      */
@@ -40,7 +40,7 @@ trait Lists {
     }
 
     /**
-     * 
+     *
      * @param \hemio\html\Interface_\HtmlCode $header
      * @return \hemio\html\Ol
      */

@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The <code>head</code> element collects the document’s metadata.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/document-metadata.html#the-head-element
  */
@@ -24,7 +24,7 @@ class Head extends Abstract_\ElementContent {
     }
 
     /**
-     * 
+     *
      * @param string $strName
      * @param string $strContent
      * @return \hemio\html\Meta
@@ -39,7 +39,7 @@ class Head extends Abstract_\ElementContent {
     }
 
     /**
-     * 
+     *
      * @param string $strFilename
      */
     function addCssFile($strFilename) {
@@ -52,7 +52,7 @@ class Head extends Abstract_\ElementContent {
     }
 
     /**
-     * 
+     *
      * @param type $url
      * @todo URL
      */

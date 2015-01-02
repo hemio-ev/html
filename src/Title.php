@@ -4,7 +4,7 @@ namespace hemio\html;
 
 /**
  * The <code>title</code> element represents the document’s title or name.
- * 
+ *
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/document-metadata.html#the-title-element
  */
