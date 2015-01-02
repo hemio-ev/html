@@ -11,7 +11,8 @@ namespace hemio\html;
  */
 class Textarea extends Abstract_\ElementContent implements Interface_\Submittable {
 
-    use Trait_\DefaultElementContent;
+    use Trait_\Submittable,
+        Trait_\DefaultElementContent;
 
     public static function tagName() {
         return 'textarea';

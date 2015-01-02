@@ -9,4 +9,17 @@ namespace hemio\html\Interface_;
  */
 interface Submittable extends MaintainsAppendages, HtmlCode {
 
+    /**
+     * Sets the 'name' attribute 
+     * @param string $name
+     */
+    public function setName($name);
+
+    /**
+     * Sets the 'form' attribute. This attribute associates the submittable 
+     * element with the form element with the correspoding name.
+     *  
+     * @param string $formName
+     */
+    public function setForm($formName);
 }

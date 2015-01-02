@@ -11,6 +11,8 @@ namespace hemio\html;
  */
 class Select extends Abstract_\ElementContent implements Interface_\Submittable {
 
+    use Trait_\Submittable;
+
     public static function tagName() {
         return 'select';
     }

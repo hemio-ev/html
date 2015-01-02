@@ -11,6 +11,8 @@ namespace hemio\html;
  */
 class Input extends Abstract_\ElementEmpty implements Interface_\Submittable {
 
+    use Trait_\Submittable;
+
     /**
      *
      * @param string $type
