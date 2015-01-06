@@ -11,6 +11,8 @@ interface HtmlCode {
 
     /**
      * Should only return strings that can be part of a valid HTML code
+     * 
+     * @return string HTML code
      */
     public function __toString();
 
