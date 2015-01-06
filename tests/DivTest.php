@@ -18,16 +18,26 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
+namespace hemio\html;
+
 /**
  * Description of DivTest
  *
  * @author Michael Herold <quabla@hemio.de>
  */
-class DivTest extends Helpers {
+class DivTest extends \Helpers {
 
     public function test1() {
-        $actual = new \hemio\html\Div;
-        $this->_assertEqualsXmlFile($actual, 'div.html');
+        $actual = new Div();
+        $this->_assertEqualsXmlFile($actual, 'div1.html');
+    }
+
+    public function test2() {
+        $actual = new Div();
+        $actual->addChild(new P());
+        $actual->addChildBeginning(new Span());
+
+        $this->_assertEqualsXmlFile($actual, 'div2.html');
     }
 
 }

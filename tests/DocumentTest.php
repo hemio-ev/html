@@ -34,7 +34,7 @@ class DocumentTest extends Helpers {
         $doc = new hemio\html\Document(new hemio\html\String('Basic test'));
         $doc->getHtml()->getHead()->addMeta('author', 'Author Name "');
 
-        $this->_assertEqualsXmlFile($doc, 'documentBaisc.html');
+        $this->_assertEqualsXmlFile($doc, 'documentBasic.html');
     }
 
     function testUnicode() {

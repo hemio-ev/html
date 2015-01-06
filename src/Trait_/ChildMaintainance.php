@@ -93,6 +93,16 @@ trait ChildMaintainance {
     }
 
     /**
+     * 
+     * @param \hemio\html\Interface_\HtmlCode $child
+     * @return \hemio\html\Interface_\HtmlCode
+     */
+    public function addChildBeginning(\hemio\html\Interface_\HtmlCode $child) {
+        array_unshift($this->arrChilds, $child);
+        return $child;
+    }
+
+    /**
      *
      * @param \hemio\html\Interface_\HtmlCode $child
      */
