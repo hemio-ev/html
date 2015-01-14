@@ -28,6 +28,11 @@ class Ul extends Abstract_\ElementContent {
         return 'ul';
     }
 
+    /**
+     * 
+     * @param Interface_\HtmlCode $child
+     * @return Li
+     */
     public function addLine(Interface_\HtmlCode $child) {
         $li = $this->addChild(new Li());
         $li->addChild($child);

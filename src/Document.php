@@ -16,7 +16,7 @@ class Document implements Interface_\HtmlCode, Interface_\MaintainsChilds {
     }
 
     public function __toString() {
-        return '<!DOCTYPE html>' . PHP_EOL . $this['_HTML'];
+        return '<!DOCTYPE html>' . PHP_EOL . $this['_HTML']->__toString();
     }
 
     /**

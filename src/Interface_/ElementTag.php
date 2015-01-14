@@ -5,7 +5,7 @@ namespace hemio\html\Interface_;
 /**
  * Description of ElementTag
  *
- * @author schnack
+ * @author Michael Herold <quabla@hemio.de>
  */
 interface ElementTag {
 
