@@ -19,6 +19,7 @@ class Head extends Abstract_\ElementContent {
     function __construct(Interface_\ContentModelText $objTitleContent) {
         $this['_TITLE'] = new Title;
         $this['_TITLE'][] = $objTitleContent;
+        $this['_BASE'] = new Nothing();
         $objCharset = ($this['_CHARSET'] = new Meta);
         $objCharset->setAttribute('charset', 'utf-8');
     }
