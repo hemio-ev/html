@@ -19,4 +19,10 @@ interface MaintainsChilds extends \ArrayAccess, \RecursiveIterator, \Countable,
      * (see {@link ContentModel}).
      */
     public function isValidChild(HtmlCode $child);
+
+    /**
+     * 
+     * @param \hemio\html\Interface_\callable $selectFilter
+     */
+    public function getRecursiveIterator(callable $selectFilter = null);
 }

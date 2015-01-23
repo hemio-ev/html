@@ -32,7 +32,7 @@ class Document implements Interface_\HtmlCode, Interface_\MaintainsChilds {
     }
 
     public function describe() {
-        return __CLASS__ . __NAMESPACE__;
+        return __CLASS__;
     }
 
 }

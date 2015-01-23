@@ -52,7 +52,7 @@ trait ChildMaintainance {
      * @param Interface_\HtmlCode $value
      */
     public function offsetSet($offset, $value) {
-        if ($this->isValidChild($value)) {
+        if ($this->isValidChild($value) || $value instanceof \hemio\html\Nothing) {
             if ($offset === null)
                 $this->arrChilds[] = $value;
             else
@@ -61,7 +61,7 @@ trait ChildMaintainance {
             $this->gainChild($value);
         } else {
             trigger_error('An instance of `' . get_class($value) .
-                    '` is no valid child for `' . get_class() . '`', E_USER_WARNING);
+                    '` is no valid child for `' . get_class($this) . '`', E_USER_WARNING);
         }
     }
 
@@ -80,6 +80,27 @@ trait ChildMaintainance {
      */
     public function getIterator() {
         return new \ArrayIterator($this->arrChilds);
+    }
+
+    /**
+     * 
+     * @param callable $selectFilter
+     * @return \Traversable
+     */
+    public function getRecursiveIterator(callable $selectFilter = null) {
+        if ($selectFilter === null) {
+            return new \RecursiveIteratorIterator($this, \RecursiveIteratorIterator::SELF_FIRST);
+        } else {
+            $array = [];
+
+            foreach ($this->getRecursiveIterator() as $child) {
+                if ($selectFilter($child)) {
+                    $array[] = $child;
+                }
+            }
+
+            return new \ArrayIterator($array);
+        }
     }
 
     /**
