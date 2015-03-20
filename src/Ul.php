@@ -33,9 +33,10 @@ class Ul extends Abstract_\ElementContent {
      * @param Interface_\HtmlCode $child
      * @return Li
      */
-    public function addLine(Interface_\HtmlCode $child) {
+    public function addLine(Interface_\HtmlCode $child = null) {
         $li = $this->addChild(new Li());
-        $li->addChild($child);
+        if ($child !== null)
+            $li->addChild($child);
         return $li;
     }
 

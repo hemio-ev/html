@@ -5,14 +5,21 @@ namespace hemio\html;
 /**
  * Empty string
  */
-class Nothing implements Interface_\HtmlCode {
+class Nothing implements Interface_\HtmlCode
+{
 
-    public function __toString() {
+    use Trait_\HooksToString;
+
+    public function __toString()
+    {
+        foreach ($this->hooksToString as $hook)
+            $hook($this);
+
         return '';
     }
 
-    public function describe() {
+    public function describe()
+    {
         return '(*nothing*)';
     }
-
 }

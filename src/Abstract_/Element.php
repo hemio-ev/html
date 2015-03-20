@@ -2,10 +2,12 @@
 
 namespace hemio\html\Abstract_;
 
-abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\Interface_\MaintainsAppendages, \hemio\html\Interface_\ElementTag {
+abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\Interface_\MaintainsAppendages,
+    \hemio\html\Interface_\ElementTag
+{
 
-    use \hemio\html\Trait_\AppendageMaintainance;
-
+    use \hemio\html\Trait_\AppendageMaintainance,
+        \hemio\html\Trait_\HooksToString;
     /**
      * parent element in DOM or something similar
      * @var \hemio\html\Interface_\MaintainsChilds
@@ -35,7 +37,8 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
      * @param string $strKey
      * @param mixed $mixValue
      */
-    public function setAttribute($strKey, $mixValue) {
+    public function setAttribute($strKey, $mixValue)
+    {
         if ($mixValue === true)
             $mixValue = $strKey;
         else if ($mixValue === false)
@@ -48,15 +51,17 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
      *
      * @param string $strKey
      */
-    public function getAttribute($strKey) {
+    public function getAttribute($strKey)
+    {
         return array_key_exists($strKey, $this->arrAttributes) ? $this
-                ->arrAttributes[$strKey] : '';
+            ->arrAttributes[$strKey] : '';
     }
 
     /**
      * @param string $strClassName
      */
-    public function addCssClass($strClassName) {
+    public function addCssClass($strClassName)
+    {
         if ($strClassName != '') {
             $this->arrCssClasses[$strClassName] = true;
         }
@@ -66,7 +71,8 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
      *
      * @param string $strClassName
      */
-    public function removeCssClass($strClassName) {
+    public function removeCssClass($strClassName)
+    {
         if (isset($this->arrCssClasses[$strClassName])) {
             unset($this->arrCssClasses[$strClassName]);
         }
@@ -76,21 +82,24 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
      * @param string $strKey
      * @param mixed $mixValue
      */
-    public function setCssProperty($strKey, $mixValue) {
+    public function setCssProperty($strKey, $mixValue)
+    {
         $this->arrCssPropertys[$strKey] = $mixValue;
     }
 
     /**
      * @param string $strId
      */
-    public function setId($strId) {
+    public function setId($strId)
+    {
         $this->setAttribute('id', $strId);
     }
 
     /**
      * writes the style collected css styles and classes into the style atribute
      */
-    protected function generateStyleAttribute() {
+    protected function generateStyleAttribute()
+    {
         // combine CSS classes
         $strClasses = '';
         foreach ($this->arrCssClasses as $strClass => $NULL) {
@@ -105,7 +114,7 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
         foreach ($this->arrCssPropertys as $strProperty => $strValue) {
             if ($strPropertys != '')
                 $strPropertys .= ' ';
-            $strPropertys .= $strProperty . ': ' . $strValue . ';';
+            $strPropertys .= $strProperty.': '.$strValue.';';
         }
         $this->setAttribute('style', $strPropertys);
     }
@@ -114,14 +123,18 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
      * Returns what deemed to be the final atributes string
      * @return string
      */
-    protected function getFormattedElementAttributes() {
+    protected function getFormattedElementAttributes()
+    {
         $strOptions = '';
         $this->generateStyleAttribute();
 
         foreach ($this->arrAttributes as $strKey => $strVal)
             if ($strVal !== '')
                 $strOptions .= sprintf(
-                        ' %s="%s"', htmlspecialchars($strKey, ENT_QUOTES | ENT_XHTML), htmlspecialchars($strVal, ENT_QUOTES | ENT_XHTML)
+                    ' %s="%s"',
+                    htmlspecialchars($strKey, ENT_QUOTES | ENT_XHTML),
+                                     htmlspecialchars($strVal,
+                                                      ENT_QUOTES | ENT_XHTML)
                 );
 
         return $strOptions;
@@ -132,12 +145,13 @@ abstract class Element implements \hemio\html\Interface_\HtmlCode, \hemio\html\I
      * Will be called while iterrating through __toString()
      * @param \hemio\html\Interface_\MaintainsChilds $objParent
      */
-    public function setParent(\hemio\html\Interface_\MaintainsChilds $objParent) {
+    public function setParent(\hemio\html\Interface_\MaintainsChilds $objParent)
+    {
         $this->objParent = $objParent;
     }
 
-    public function describe() {
+    public function describe()
+    {
         return $this->tagName();
     }
-
 }

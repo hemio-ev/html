@@ -9,7 +9,8 @@ namespace hemio\html\Interface_;
  * @author Michael Herold <quabla@hemio.de>
  */
 interface MaintainsChilds extends \ArrayAccess, \RecursiveIterator, \Countable,
- MaintainsAppendages {
+ MaintainsAppendages
+{
 
     /**
      * Some HTML elements may only have specific childs and the should implement
@@ -21,8 +22,22 @@ interface MaintainsChilds extends \ArrayAccess, \RecursiveIterator, \Countable,
     public function isValidChild(HtmlCode $child);
 
     /**
-     * 
+     *
      * @param \hemio\html\Interface_\callable $selectFilter
      */
     public function getRecursiveIterator(callable $selectFilter = null);
+
+    /**
+     *
+     * @param callable $hook
+     * @param string $idx
+     */
+    public function addHookGainChild(callable $hook, $idx = null);
+
+    /**
+     *
+     * @param callable $hook
+     * @param string $idx
+     */
+    public function addHookToString(callable $hook, $idx = null);
 }

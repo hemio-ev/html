@@ -2,14 +2,19 @@
 
 namespace hemio\html\Abstract_;
 
-abstract class ElementContent extends Element implements \hemio\html\Interface_\MaintainsChilds {
+abstract class ElementContent extends Element implements \hemio\html\Interface_\MaintainsChilds
+{
 
     use \hemio\html\Trait_\ChildMaintainance;
 
     /**
      *
      */
-    public function __toString() {
+    public function __toString()
+    {
+        foreach ($this->hooksToString as $hook)
+            $hook($this);
+
         $blnFormatted = true;
 
         if ($this->blnIsBlock() && $blnFormatted)
@@ -20,19 +25,19 @@ abstract class ElementContent extends Element implements \hemio\html\Interface_\
         $strReturn = '';
 
         $strReturn .=
-                '<' . static::tagName()
-                . $this->getFormattedElementAttributes()
-                . '>'
-                . $strNewLine;
+            '<'.static::tagName()
+            .$this->getFormattedElementAttributes()
+            .'>'
+            .$strNewLine;
 
         foreach ($this as $child)
             $strReturn .= $child->__toString();
 
         $strReturn .=
-                $strNewLine .
-                '</' . static::tagName() .
-                '>' .
-                $strNewLine;
+            $strNewLine.
+            '</'.static::tagName().
+            '>'.
+            $strNewLine;
 
         return $strReturn;
     }
@@ -43,12 +48,13 @@ abstract class ElementContent extends Element implements \hemio\html\Interface_\
      *
      * @return boolean
      */
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return false;
     }
 
-    public function describe() {
+    public function describe()
+    {
         return sprintf('%s(%d)', $this->tagName(), $this->count());
     }
-
 }

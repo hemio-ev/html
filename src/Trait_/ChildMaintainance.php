@@ -12,19 +12,34 @@ namespace hemio\html\Trait_;
  * @author Michael Herold <quabla@hemio.de>
  * @todo Cleanup
  */
-trait ChildMaintainance {
-
+trait ChildMaintainance
+{
     /**
      * child elemnts of the element
      * @var array
      */
-    private $arrChilds = array();
+    private $arrChilds = [];
+
+    /**
+     *
+     * @var array[callable]
+     */
+    protected $arrHooksGainChild = [];
+
+    public function addHookGainChild(callable $hook, $idx = null)
+    {
+        if ($idx === null)
+            $this->arrHooksGainChild[]     = $hook;
+        else
+            $this->arrHooksGainChild[$idx] = $hook;
+    }
 
     /**
      *
      * @return integer
      */
-    public function count() {
+    public function count()
+    {
         return count($this->arrChilds);
     }
 
@@ -33,7 +48,8 @@ trait ChildMaintainance {
      * @param mixed $offset
      * @return boolean
      */
-    public function offsetExists($offset) {
+    public function offsetExists($offset)
+    {
         return array_key_exists($offset, $this->arrChilds);
     }
 
@@ -42,7 +58,8 @@ trait ChildMaintainance {
      * @param mixed $offset
      * @return Interface_\HtmlCode
      */
-    public function offsetGet($offset) {
+    public function offsetGet($offset)
+    {
         return $this->arrChilds[$offset];
     }
 
@@ -51,17 +68,18 @@ trait ChildMaintainance {
      * @param mixed $offset
      * @param Interface_\HtmlCode $value
      */
-    public function offsetSet($offset, $value) {
+    public function offsetSet($offset, $value)
+    {
         if ($this->isValidChild($value) || $value instanceof \hemio\html\Nothing) {
             if ($offset === null)
-                $this->arrChilds[] = $value;
+                $this->arrChilds[]        = $value;
             else
                 $this->arrChilds[$offset] = $value;
 
             $this->gainChild($value);
         } else {
-            trigger_error('An instance of `' . get_class($value) .
-                    '` is no valid child for `' . get_class($this) . '`', E_USER_WARNING);
+            trigger_error('An instance of `'.get_class($value).
+                '` is no valid child for `'.get_class($this).'`', E_USER_WARNING);
         }
     }
 
@@ -69,7 +87,8 @@ trait ChildMaintainance {
      *
      * @param type $offset
      */
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset)
+    {
         unset($this->arrChilds[$offset]);
     }
 
@@ -78,18 +97,21 @@ trait ChildMaintainance {
      *
      * @return \Traversable
      */
-    public function getIterator() {
+    public function getIterator()
+    {
         return new \ArrayIterator($this->arrChilds);
     }
 
     /**
-     * 
+     *
      * @param callable $selectFilter
      * @return \Traversable
      */
-    public function getRecursiveIterator(callable $selectFilter = null) {
+    public function getRecursiveIterator(callable $selectFilter = null)
+    {
         if ($selectFilter === null) {
-            return new \RecursiveIteratorIterator($this, \RecursiveIteratorIterator::SELF_FIRST);
+            return new \RecursiveIteratorIterator($this,
+                                                  \RecursiveIteratorIterator::SELF_FIRST);
         } else {
             $array = [];
 
@@ -108,17 +130,19 @@ trait ChildMaintainance {
      * @param \hemio\html\Interface_\HtmlCode $child
      * @return \hemio\html\Interface_\HtmlCode
      */
-    protected function addChildInternal(\hemio\html\Interface_\HtmlCode $child) {
+    protected function addChildInternal(\hemio\html\Interface_\HtmlCode $child)
+    {
         $this[] = $child;
         return $child;
     }
 
     /**
-     * 
+     *
      * @param \hemio\html\Interface_\HtmlCode $child
      * @return \hemio\html\Interface_\HtmlCode
      */
-    public function addChildBeginning(\hemio\html\Interface_\HtmlCode $child) {
+    public function addChildBeginning(\hemio\html\Interface_\HtmlCode $child)
+    {
         array_unshift($this->arrChilds, $child);
         return $child;
     }
@@ -127,7 +151,12 @@ trait ChildMaintainance {
      *
      * @param \hemio\html\Interface_\HtmlCode $child
      */
-    protected function gainChild(\hemio\html\Interface_\HtmlCode $child) {
+    protected function gainChild(\hemio\html\Interface_\HtmlCode $child)
+    {
+        foreach ($this->arrHooksGainChild as $hook) {
+            $hook($this, $child);
+        }
+
         if ($child instanceof \hemio\html\Abstract_\Element)
             $child->setParent($this);
 
@@ -136,37 +165,45 @@ trait ChildMaintainance {
                 $child->leaveInheritableAppendage($appKey, $appValue);
     }
 
-    public function __clone() {
+    public function __clone()
+    {
         foreach ($this->arrChilds as $key => $child) {
             $this->arrChilds[$key] = clone $child;
         }
     }
 
-    public function valid() {
+    public function valid()
+    {
         return current($this->arrChilds) !== false;
     }
 
-    public function hasChildren() {
+    public function hasChildren()
+    {
         return $this->current() instanceof \RecursiveIterator;
     }
 
-    public function next() {
+    public function next()
+    {
         next($this->arrChilds);
     }
 
-    public function current() {
+    public function current()
+    {
         return current($this->arrChilds);
     }
 
-    public function getChildren() {
+    public function getChildren()
+    {
         return $this->current();
     }
 
-    public function rewind() {
+    public function rewind()
+    {
         reset($this->arrChilds);
     }
 
-    public function key() {
+    public function key()
+    {
         return key($this->arrChilds);
     }
 

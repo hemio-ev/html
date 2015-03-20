@@ -7,11 +7,12 @@ namespace hemio\html\Interface_;
  *  to the client as HTML code. This implies that implementations do everything
  *  required for input sanitization.
  */
-interface HtmlCode {
+interface HtmlCode
+{
 
     /**
      * Should only return strings that can be part of a valid HTML code
-     * 
+     *
      * @return string HTML code
      */
     public function __toString();
@@ -20,4 +21,11 @@ interface HtmlCode {
      * @return string
      */
     public function describe();
+
+    /**
+     *
+     * @param \hemio\html\Interface_\callable $hook
+     * @param string $idx
+     */
+    public function addHookToString(callable $hook, $idx = null);
 }
