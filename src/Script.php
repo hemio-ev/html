@@ -9,12 +9,13 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/scripting-1.html#the-script-element
  */
-class Script extends Abstract_\ElementContent {
+class Script extends Abstract_\ElementContent implements Interface_\ContentModelMetadata
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'script';
     }
-
 }

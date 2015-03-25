@@ -8,9 +8,14 @@ class String implements Interface_\ContentModelText
     use Trait_\HooksToString;
     protected $strContent = '';
 
-    function __construct($strContent)
+    function __construct($content)
     {
-        $this->strContent = $strContent;
+        $this->strContent = $content;
+    }
+
+    public function setValue($content)
+    {
+        $this->strContent = $content;
     }
 
     function __toString()
