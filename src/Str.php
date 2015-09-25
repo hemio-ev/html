@@ -2,7 +2,7 @@
 
 namespace hemio\html;
 
-class String implements Interface_\ContentModelText
+class Str implements Interface_\ContentModelText
 {
 
     use Trait_\HooksToString;

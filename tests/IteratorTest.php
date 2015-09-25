@@ -45,7 +45,7 @@ class IteratorTest extends \Helpers {
     }
 
     public function getExample() {
-        $doc = new Document(new String('Title'));
+        $doc = new Document(new Str('Title'));
 
         $doc->getHtml()
                 ->addChild(new Header())

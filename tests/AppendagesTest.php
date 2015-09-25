@@ -26,7 +26,7 @@
 class AppendagesTest extends Helpers {
 
     public function testBasic() {
-        $doc = new hemio\html\Document(new hemio\html\String(''));
+        $doc = new hemio\html\Document(new hemio\html\Str(''));
         $doc->addInheritableAppendage('axkdw_sda2', '-lsk3jfl#1-');
         $div = new \hemio\html\Div;
         $doc->getHtml()->getBody()->addChild($div);
@@ -35,7 +35,7 @@ class AppendagesTest extends Helpers {
     }
 
     public function testLateAdded() {
-        $doc = new hemio\html\Document(new hemio\html\String(''));
+        $doc = new hemio\html\Document(new hemio\html\Str(''));
         $div = new \hemio\html\Div;
         $doc->getHtml()->getBody()->addChild($div);
         $doc->addInheritableAppendage('axkdw_sda2', '-lsk3jfl#1-');
@@ -44,7 +44,7 @@ class AppendagesTest extends Helpers {
     }
 
     public function testBasicExisting() {
-        $doc = new hemio\html\Document(new hemio\html\String(''));
+        $doc = new hemio\html\Document(new hemio\html\Str(''));
         $doc->addInheritableAppendage('key', 'overwritten-value');
         $div = new \hemio\html\Div;
         $div->addInheritableAppendage('key', 'existing-value');
@@ -54,7 +54,7 @@ class AppendagesTest extends Helpers {
     }
 
     public function testLateAddedExisting() {
-        $doc = new hemio\html\Document(new hemio\html\String(''));
+        $doc = new hemio\html\Document(new hemio\html\Str(''));
         $div = new \hemio\html\Div;
         $div->addInheritableAppendage('key', 'existing-value');
         $doc->getHtml()->getBody()->addChild($div);

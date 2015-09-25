@@ -26,19 +26,19 @@
 class DocumentTest extends Helpers {
 
     function testPlain() {
-        $doc = new hemio\html\Document(new hemio\html\String('Title <> "'));
+        $doc = new hemio\html\Document(new hemio\html\Str('Title <> "'));
         $this->_assertEqualsXmlFile($doc, 'documentPlain.html');
     }
 
     function testBasic() {
-        $doc = new hemio\html\Document(new hemio\html\String('Basic test'));
+        $doc = new hemio\html\Document(new hemio\html\Str('Basic test'));
         $doc->getHtml()->getHead()->addMeta('author', 'Author Name "');
 
         $this->_assertEqualsXmlFile($doc, 'documentBasic.html');
     }
 
     function testUnicode() {
-        $doc = new hemio\html\Document(new hemio\html\String('ת—א'));
+        $doc = new hemio\html\Document(new hemio\html\Str('ת—א'));
         $doc->getHtml()->getHead()->addMeta('author', '‏أبو زيد حنين بن إسحاق العبادي');
 
         $this->_assertEqualsXmlFile($doc, 'documentUnicode.html');

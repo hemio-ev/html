@@ -1,3 +1,6 @@
+v0.2.0-unreleased
+  - Adds support for PHP 7
+  - Changes class name html\String to html\Str for PHP 7 compatibility
 v0.1.1
   - First version used in production
   - Adds GPL LICENSE

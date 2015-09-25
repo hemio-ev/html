@@ -9,11 +9,10 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/text-level-semantics.html#the-time-element
  */
-class Time
-        extends Abstract_\ElementContent {
+class Time extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
-
     /**
      *
      * @var \DateTime
@@ -26,16 +25,17 @@ class Time
      */
     protected $timeFormat;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'time';
     }
 
-    public function __construct(\DateTime $time = null, $format = '%x') {
-        $this->time = $time;
+    public function __construct(\DateTime $time = null, $format = '%x')
+    {
+        $this->time       = $time;
         $this->timeFormat = $format;
 
-        $this['_TIME'] = new String(strftime($this->timeFormat,
-                        $this->time->getTimestamp()));
+        $this['_TIME'] = new Str(strftime($this->timeFormat,
+                                          $this->time->getTimestamp()));
     }
-
 }
