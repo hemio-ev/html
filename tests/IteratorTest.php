@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Copyright (C) 2015 Michael Herold <quabla@hemio.de>
  *
@@ -24,14 +23,17 @@ namespace hemio\html;
  *
  * @author Michael Herold <quabla@hemio.de>
  */
-class IteratorTest extends \Helpers {
+class IteratorTest extends \Helpers
+{
 
-    public function testRecursiveIterator() {
+    public function testRecursiveIterator()
+    {
         $doc = $this->getExample();
         $this->assertCount(13, $doc->getRecursiveIterator());
     }
 
-    public function testRecursiveIteratorFiltered() {
+    public function testRecursiveIteratorFiltered()
+    {
         $doc = $this->getExample();
 
         $select = function (Interface_\HtmlCode $child) {
@@ -44,20 +46,20 @@ class IteratorTest extends \Helpers {
         $this->assertCount(3, $doc->getRecursiveIterator($select));
     }
 
-    public function getExample() {
+    public function getExample()
+    {
         $doc = new Document(new Str('Title'));
 
         $doc->getHtml()
-                ->addChild(new Header())
-                ->addChild(new Div());
+            ->addChild(new Header())
+            ->addChild(new Div());
 
         $doc->getHtml()
-                ->addChild(new Div())
-                ->addChild(new Section())
-                ->addChild(new Article())
-                ->addChild(new Div());
+            ->addChild(new Div())
+            ->addChild(new Section())
+            ->addChild(new Article())
+            ->addChild(new Div());
 
         return $doc;
     }
-
 }

@@ -8,16 +8,18 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/sections.html#the-footer-element
  */
-class Footer extends Abstract_\ElementContent {
+class Footer extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'footer';
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

@@ -8,7 +8,7 @@ class Str implements Interface_\ContentModelText
     use Trait_\HooksToString;
     protected $strContent = '';
 
-    function __construct($content)
+    public function __construct($content)
     {
         $this->strContent = $content;
     }
@@ -18,7 +18,7 @@ class Str implements Interface_\ContentModelText
         $this->strContent = $content;
     }
 
-    function __toString()
+    public function __toString()
     {
         foreach ($this->hooksToString as $hook)
             $hook($this);

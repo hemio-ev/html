@@ -9,6 +9,7 @@ namespace hemio\html\Interface_;
  *
  * @link http://www.w3.org/TR/html5/dom.html#metadata-content-0
  */
-interface ContentModelMetadata extends ContentModel {
+interface ContentModelMetadata extends ContentModel
+{
 
 }

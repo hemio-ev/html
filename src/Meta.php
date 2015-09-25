@@ -9,10 +9,11 @@ namespace hemio\html;
  * @url http://www.w3.org/TR/html5/document-metadata.html#the-meta-element
  * @since 1.0
  */
-class Meta extends Abstract_\ElementEmpty implements Interface_\ContentModelMetadata {
+class Meta extends Abstract_\ElementEmpty implements Interface_\ContentModelMetadata
+{
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'meta';
     }
-
 }

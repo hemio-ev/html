@@ -8,14 +8,16 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/grouping-content.html#the-hr-element
  */
-class Hr extends Abstract_\ElementEmpty {
+class Hr extends Abstract_\ElementEmpty
+{
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'hr';
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

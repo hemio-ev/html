@@ -9,16 +9,18 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/sections.html#the-body-element
  */
-class Body extends Abstract_\ElementContent {
+class Body extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'body';
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

@@ -11,16 +11,18 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/grouping-content.html#the-figure-element
  */
-class Figure extends Abstract_\ElementContent {
+class Figure extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'figure';
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

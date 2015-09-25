@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Copyright (C) 2014 Michael Herold <quabla@hemio.de>
  *
@@ -25,19 +24,21 @@ namespace hemio\html;
  *
  * @author Michael Herold <quabla@hemio.de>
  */
-class DivTest extends \Helpers {
+class DivTest extends \Helpers
+{
 
-    public function test1() {
+    public function test1()
+    {
         $actual = new Div();
         $this->_assertEqualsXmlFile($actual, 'div1.html');
     }
 
-    public function test2() {
+    public function test2()
+    {
         $actual = new Div();
         $actual->addChild(new P());
         $actual->addChildBeginning(new Span());
 
         $this->_assertEqualsXmlFile($actual, 'div2.html');
     }
-
 }

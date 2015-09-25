@@ -5,7 +5,8 @@ namespace hemio\html\Interface_;
 /**
  * Things that can maintain abritary appendages stored under a keyword
  */
-interface MaintainsAppendages {
+interface MaintainsAppendages
+{
 
     /**
      *

@@ -9,7 +9,8 @@ namespace hemio\html;
  * @since 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-input-element
  */
-class Input extends Abstract_\ElementEmpty implements Interface_\Submittable {
+class Input extends Abstract_\ElementEmpty implements Interface_\Submittable
+{
 
     use Trait_\Submittable;
 
@@ -17,13 +18,14 @@ class Input extends Abstract_\ElementEmpty implements Interface_\Submittable {
      *
      * @param string $type
      */
-    public function __construct($type = null) {
+    public function __construct($type = null)
+    {
         if ($type !== null)
             $this->setAttribute('type', $type);
     }
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'input';
     }
-
 }

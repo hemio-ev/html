@@ -10,9 +10,11 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-option-element
  */
-class Option extends Abstract_\ElementContent implements Interface_\ContentModelSelect {
+class Option extends Abstract_\ElementContent implements Interface_\ContentModelSelect
+{
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'option';
     }
 
@@ -21,12 +23,14 @@ class Option extends Abstract_\ElementContent implements Interface_\ContentModel
      * @param string $strValue
      * @param Interface_\ContentModelText $objText
      */
-    function __construct($strValue, Interface_\ContentModelText $objText) {
+    function __construct($strValue, Interface_\ContentModelText $objText)
+    {
         $this->setAttribute('value', $strValue);
         $this->addChild($objText);
     }
 
-    public function isValidChild(Interface_\HtmlCode $child) {
+    public function isValidChild(Interface_\HtmlCode $child)
+    {
         return $child instanceof Interface_\ContentModelText;
     }
 
@@ -35,9 +39,9 @@ class Option extends Abstract_\ElementContent implements Interface_\ContentModel
      * @param Interface_\ContentModelText $string
      * @return Interface_\ContentModelText
      */
-    public function addChild(Interface_\ContentModelText $string) {
+    public function addChild(Interface_\ContentModelText $string)
+    {
         $this->addChildInternal($string);
         return $string;
     }
-
 }

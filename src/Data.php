@@ -9,12 +9,13 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/text-level-semantics.html#the-data-element
  */
-class Data extends Abstract_\ElementContent {
+class Data extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'data';
     }
-
 }

@@ -9,13 +9,14 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-keygen-element
  */
-class Keygen extends Abstract_\ElementContent implements Interface_\Submittable {
+class Keygen extends Abstract_\ElementContent implements Interface_\Submittable
+{
 
     use Trait_\Submittable,
         Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'keygen';
     }
-
 }

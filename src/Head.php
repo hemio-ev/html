@@ -82,7 +82,7 @@ class Head extends Abstract_\ElementContent
         $this['_BASE'] = $base;
     }
 
-    function blnIsBlock()
+    public function blnIsBlock()
     {
         return true;
     }

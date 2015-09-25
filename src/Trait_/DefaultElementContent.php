@@ -10,7 +10,8 @@ namespace hemio\html\Trait_;
  * more element specific methods (e.g. <code>isValidChild()</code>) required by MaintainsChilds
  * @author Michael Herold <quabla@hemio.de>
  */
-trait DefaultElementContent {
+trait DefaultElementContent
+{
 
     /**
      * Used by addChild, therefore has to be defined here
@@ -25,7 +26,8 @@ trait DefaultElementContent {
      * @param \hemio\html\Interface_\HtmlCode $child
      * @return \hemio\html\Interface_\HtmlCode
      */
-    public function addChild(\hemio\html\Interface_\HtmlCode $child) {
+    public function addChild(\hemio\html\Interface_\HtmlCode $child)
+    {
         $this->addChildInternal($child);
         return $child;
     }
@@ -36,8 +38,8 @@ trait DefaultElementContent {
      * @param \hemio\html\Interface_\HtmlCode $child
      * @return boolean
      */
-    public function isValidChild(\hemio\html\Interface_\HtmlCode $child) {
+    public function isValidChild(\hemio\html\Interface_\HtmlCode $child)
+    {
         return true;
     }
-
 }

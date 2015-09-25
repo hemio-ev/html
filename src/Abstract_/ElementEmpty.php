@@ -3,7 +3,7 @@
 namespace hemio\html\Abstract_;
 
 /**
- * Enpty HTML elements, e.g. the br-tag
+ * Empty HTML elements, e.g. the br-tag
  */
 abstract class ElementEmpty extends Element
 {

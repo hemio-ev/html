@@ -9,21 +9,24 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-select-element
  */
-class Select extends Abstract_\ElementContent implements Interface_\Submittable {
+class Select extends Abstract_\ElementContent implements Interface_\Submittable
+{
 
     use Trait_\Submittable;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'select';
     }
 
-    public function isValidChild(Interface_\HtmlCode $child) {
+    public function isValidChild(Interface_\HtmlCode $child)
+    {
         return $child instanceof Interface_\ContentModelSelect;
     }
 
-    public function addChild(Interface_\ContentModelSelect $child) {
+    public function addChild(Interface_\ContentModelSelect $child)
+    {
         $this->addChildInternal($child);
         return $child;
     }
-
 }

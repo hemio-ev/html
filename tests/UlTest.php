@@ -6,13 +6,15 @@ use hemio\html\P;
 use hemio\html\Ul;
 use hemio\html\Li;
 
-class UlTest extends Helpers {
+class UlTest extends Helpers
+{
 
     /**
      * @param integer $n
      */
-    private function largeDocument($n) {
-        $doc = new Document(new Str('My Title'));
+    private function largeDocument($n)
+    {
+        $doc  = new Document(new Str('My Title'));
         $html = $doc->getHtml();
         $body = $html->getBody();
 
@@ -33,16 +35,17 @@ class UlTest extends Helpers {
         return $doc;
     }
 
-    public function test100() {
+    public function test100()
+    {
         $doc = $this->largeDocument(100);
 
         $this->_assertEqualsXmlFile($doc, 'ul100.html');
     }
 
-    public function test2000() {
+    public function test2000()
+    {
         $doc = $this->largeDocument(2000);
 
         $this->_assertEqualsXmlFile($doc, 'ul2000.html');
     }
-
 }

@@ -2,14 +2,16 @@
 
 namespace hemio\html\Trait_;
 
-trait Lists {
+trait Lists
+{
 
     /**
      *
      * @param \hemio\html\Li $child
      * @return \hemio\html\Li
      */
-    public function addChild(\hemio\html\Li $child) {
+    public function addChild(\hemio\html\Li $child)
+    {
         $this->addChildInternal($child);
         return $child;
     }
@@ -20,7 +22,8 @@ trait Lists {
      * @param \hemio\html\Interface_\HtmlCode $withEntry The contained entry
      * @return \hemio\html\Li
      */
-    public function addEntryWith(\hemio\html\Interface_\HtmlCode $withEntry) {
+    public function addEntryWith(\hemio\html\Interface_\HtmlCode $withEntry)
+    {
         $li = new \hemio\html\Li();
         $li->addChild($withEntry);
         return $this->addChild($li);
@@ -31,8 +34,9 @@ trait Lists {
      * @param \hemio\html\Interface_\HtmlCode $header
      * @return \hemio\html\Ul
      */
-    public function addSubUl(\hemio\html\Interface_\HtmlCode $header) {
-        $li = $this->addChild(new \hemio\html\Li);
+    public function addSubUl(\hemio\html\Interface_\HtmlCode $header)
+    {
+        $li      = $this->addChild(new \hemio\html\Li);
         $li->addChild($header);
         $newList = new \hemio\html\Ul();
         $li->addChild($newList);
@@ -44,15 +48,17 @@ trait Lists {
      * @param \hemio\html\Interface_\HtmlCode $header
      * @return \hemio\html\Ol
      */
-    public function addSubOl(\hemio\html\Interface_\HtmlCode $header) {
-        $li = $this->addChild(new \hemio\html\Li);
+    public function addSubOl(\hemio\html\Interface_\HtmlCode $header)
+    {
+        $li      = $this->addChild(new \hemio\html\Li);
         $li->addChild($header);
         $newList = new \hemio\html\Ol();
         $li->addChild($newList);
         return $newList;
     }
 
-    public function isValidChild(\hemio\html\Interface_\HtmlCode $child) {
+    public function isValidChild(\hemio\html\Interface_\HtmlCode $child)
+    {
         return $child instanceof \hemio\html\Li;
     }
 

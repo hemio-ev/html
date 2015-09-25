@@ -10,16 +10,18 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/grouping-content.html#the-ol-element
  */
-class Ol extends Abstract_\ElementContent {
+class Ol extends Abstract_\ElementContent
+{
 
     use Trait_\Lists;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'ol';
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

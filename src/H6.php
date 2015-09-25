@@ -9,12 +9,13 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements
  */
-class H6 extends Abstract_\ElementContent {
+class H6 extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'h6';
     }
-
 }

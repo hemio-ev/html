@@ -8,16 +8,18 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/document-metadata.html#the-title-element
  */
-class Title extends Abstract_\ElementContent implements Interface_\ContentModelMetadata {
+class Title extends Abstract_\ElementContent implements Interface_\ContentModelMetadata
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'title';
     }
 
-    public function isValidChild(Interface_\HtmlCode $objChild) {
+    public function isValidChild(Interface_\HtmlCode $objChild)
+    {
         return $objChild instanceof Interface_\ContentModelText;
     }
-
 }

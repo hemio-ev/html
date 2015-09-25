@@ -1,6 +1,9 @@
 <?php
+
 namespace hemio\html;
 
-interface referencing {
-	public function addLink(referenceable $obj);
+interface referencing
+{
+
+    public function addLink(referenceable $obj);
 }

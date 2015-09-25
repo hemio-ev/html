@@ -9,12 +9,13 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/tabular-data.html#the-col-element
  */
-class Col extends Abstract_\ElementContent {
+class Col extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'col';
     }
-
 }

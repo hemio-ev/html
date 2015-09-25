@@ -7,7 +7,8 @@ namespace hemio\html\Interface_;
  *
  * @author Michael Herold <quabla@hemio.de>
  */
-interface ElementTag {
+interface ElementTag
+{
 
     /**
      * Defines the name of the element like 'emph' in <emph>

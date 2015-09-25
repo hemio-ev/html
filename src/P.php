@@ -8,21 +8,24 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/grouping-content.html#the-p-element
  */
-class P extends Abstract_\ElementContent {
+class P extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'p';
     }
 
-    function __construct(Interface_\HtmlCode $objChild = null) {
+    function __construct(Interface_\HtmlCode $objChild = null)
+    {
         if ($objChild)
             $this->addChild($objChild);
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

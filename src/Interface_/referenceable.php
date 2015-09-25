@@ -1,12 +1,15 @@
 <?php
+
 namespace hemio\html;
-interface referenceable {
 
-	public function strGetName();
+interface referenceable
+{
 
-	public function strGetTitle();
+    public function strGetName();
 
-	public function objGetLastLink();
+    public function strGetTitle();
 
-	public function setLastLink($a);
+    public function objGetLastLink();
+
+    public function setLastLink($a);
 }

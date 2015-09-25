@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Copyright (C) 2015 Michael Herold <quabla@hemio.de>
  *
@@ -20,28 +19,31 @@
 namespace hemio\html\Trait_;
 
 /**
- * 
+ *
  * @todo ensure propper name
  * @todo description
  * @author Michael Herold <quabla@hemio.de>
  */
-trait Submittable {
+trait Submittable
+{
 
     /**
-     * Sets the 'name' attribute 
+     * Sets the 'name' attribute
      * @param string $name
      */
-    public function setName($name) {
+    public function setName($name)
+    {
         $this->setAttribute('name', $name);
     }
 
     /**
-     * Sets the 'form' attribute. This attribute associates the submittable 
+     * Sets the 'form' attribute. This attribute associates the submittable
      * element with the form element with the correspoding name.
-     *  
+     *
      * @param string $formName
      */
-    public function setForm($formName) {
+    public function setForm($formName)
+    {
         $this->setAttribute('form', $formName);
     }
 

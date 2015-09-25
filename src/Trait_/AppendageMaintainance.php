@@ -5,8 +5,8 @@ namespace hemio\html\Trait_;
 /**
  *
  */
-trait AppendageMaintainance {
-
+trait AppendageMaintainance
+{
     /**
      * @var array
      */
@@ -26,7 +26,8 @@ trait AppendageMaintainance {
      * @param string $key
      * @param mixed $appendage
      */
-    public function addInheritableAppendage($key, $appendage) {
+    public function addInheritableAppendage($key, $appendage)
+    {
         $this->arrIndividualAppendages[$key] = true;
         $this->storeInheritableAppendage($key, $appendage);
     }
@@ -36,7 +37,8 @@ trait AppendageMaintainance {
      * @param string $key
      * @param mixed $appendage
      */
-    public function leaveInheritableAppendage($key, $appendage) {
+    public function leaveInheritableAppendage($key, $appendage)
+    {
         if (!$this->appendageIsIndividual($key)) {
             $this->storeInheritableAppendage($key, $appendage);
         }
@@ -47,7 +49,8 @@ trait AppendageMaintainance {
      * @param string $key
      * @param mixed $appendage
      */
-    private function storeInheritableAppendage($key, $appendage) {
+    private function storeInheritableAppendage($key, $appendage)
+    {
         $this->arrInheritableAppendages[$key] = $appendage;
 
         if ($this instanceof \hemio\html\Interface_\MaintainsChilds) {
@@ -64,7 +67,8 @@ trait AppendageMaintainance {
      * @param string $key
      * @return null|mixed
      */
-    public function getInheritableAppendage($key) {
+    public function getInheritableAppendage($key)
+    {
         if (array_key_exists($key, $this->arrInheritableAppendages))
             return $this->arrInheritableAppendages[$key];
         else
@@ -76,7 +80,8 @@ trait AppendageMaintainance {
      * @param string $key
      * @return boolean
      */
-    public function existsInheritableAppendage($key) {
+    public function existsInheritableAppendage($key)
+    {
         return $this->getInheritableAppendage($key) !== null;
     }
 
@@ -85,15 +90,16 @@ trait AppendageMaintainance {
      * @param string $key
      * @return boolean
      */
-    public function appendageIsIndividual($key) {
+    public function appendageIsIndividual($key)
+    {
         return array_key_exists($key, $this->arrIndividualAppendages);
     }
 
     /**
      * @return array All appendages with keys
      */
-    public function getInheritableAppendages() {
+    public function getInheritableAppendages()
+    {
         return $this->arrInheritableAppendages;
     }
-
 }

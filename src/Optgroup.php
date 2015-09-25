@@ -9,9 +9,11 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/forms.html#the-optgroup-element
  */
-class Optgroup extends Abstract_\ElementContent implements Interface_\ContentModelSelect {
+class Optgroup extends Abstract_\ElementContent implements Interface_\ContentModelSelect
+{
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'optgroup';
     }
 
@@ -20,7 +22,8 @@ class Optgroup extends Abstract_\ElementContent implements Interface_\ContentMod
      * @param Option $option
      * @return Option
      */
-    public function addChild(Option $option) {
+    public function addChild(Option $option)
+    {
         return $this->addChildInternal($option);
     }
 
@@ -29,8 +32,8 @@ class Optgroup extends Abstract_\ElementContent implements Interface_\ContentMod
      * @param Interface_\HtmlCode $child
      * @return boolean
      */
-    public function isValidChild(Interface_\HtmlCode $child) {
+    public function isValidChild(Interface_\HtmlCode $child)
+    {
         return $child instanceof Option;
     }
-
 }

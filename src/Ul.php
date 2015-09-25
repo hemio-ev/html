@@ -9,35 +9,39 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/grouping-content.html#the-ul-element
  */
-class Ul extends Abstract_\ElementContent {
+class Ul extends Abstract_\ElementContent
+{
 
     use Trait_\Lists;
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
 
-    public function __toString() {
+    public function __toString()
+    {
         if ($this->count() > 0)
             return parent::__toString();
         else
             return '';
     }
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'ul';
     }
 
     /**
-     * 
+     *
      * @param Interface_\HtmlCode $child
      * @return Li
      */
-    public function addLine(Interface_\HtmlCode $child = null) {
+    public function addLine(Interface_\HtmlCode $child = null)
+    {
         $li = $this->addChild(new Li());
         if ($child !== null)
             $li->addChild($child);
         return $li;
     }
-
 }

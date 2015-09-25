@@ -9,16 +9,18 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/scripting-1.html#the-noscript-element
  */
-class Noscript extends Abstract_\ElementContent implements Interface_\ContentModelMetadata {
+class Noscript extends Abstract_\ElementContent implements Interface_\ContentModelMetadata
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'noscript';
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

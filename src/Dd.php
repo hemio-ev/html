@@ -9,16 +9,18 @@ namespace hemio\html;
  * @url http://www.w3.org/TR/html5/grouping-content.html#the-dt-element
  * @todo check prev. element dt
  */
-class Dd extends Abstract_\ElementContent {
+class Dd extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'dd';
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

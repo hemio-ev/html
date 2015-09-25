@@ -9,10 +9,11 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/document-metadata.html#the-link-element
  */
-class Link extends Abstract_\ElementEmpty implements Interface_\ContentModelMetadata {
+class Link extends Abstract_\ElementEmpty implements Interface_\ContentModelMetadata
+{
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'link';
     }
-
 }

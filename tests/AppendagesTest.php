@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Copyright (C) 2014 Michael Herold <quabla@hemio.de>
  *
@@ -23,44 +22,52 @@
  *
  * @author Michael Herold <quabla@hemio.de>
  */
-class AppendagesTest extends Helpers {
+class AppendagesTest extends Helpers
+{
 
-    public function testBasic() {
+    public function testBasic()
+    {
         $doc = new hemio\html\Document(new hemio\html\Str(''));
         $doc->addInheritableAppendage('axkdw_sda2', '-lsk3jfl#1-');
         $div = new \hemio\html\Div;
         $doc->getHtml()->getBody()->addChild($div);
 
-        $this->assertEquals('-lsk3jfl#1-', $div->getInheritableAppendage('axkdw_sda2'));
+        $this->assertEquals('-lsk3jfl#1-',
+                            $div->getInheritableAppendage('axkdw_sda2'));
     }
 
-    public function testLateAdded() {
+    public function testLateAdded()
+    {
         $doc = new hemio\html\Document(new hemio\html\Str(''));
         $div = new \hemio\html\Div;
         $doc->getHtml()->getBody()->addChild($div);
         $doc->addInheritableAppendage('axkdw_sda2', '-lsk3jfl#1-');
 
-        $this->assertEquals('-lsk3jfl#1-', $div->getInheritableAppendage('axkdw_sda2'));
+        $this->assertEquals('-lsk3jfl#1-',
+                            $div->getInheritableAppendage('axkdw_sda2'));
     }
 
-    public function testBasicExisting() {
+    public function testBasicExisting()
+    {
         $doc = new hemio\html\Document(new hemio\html\Str(''));
         $doc->addInheritableAppendage('key', 'overwritten-value');
         $div = new \hemio\html\Div;
         $div->addInheritableAppendage('key', 'existing-value');
         $doc->getHtml()->getBody()->addChild($div);
 
-        $this->assertEquals('existing-value', $div->getInheritableAppendage('key'));
+        $this->assertEquals('existing-value',
+                            $div->getInheritableAppendage('key'));
     }
 
-    public function testLateAddedExisting() {
+    public function testLateAddedExisting()
+    {
         $doc = new hemio\html\Document(new hemio\html\Str(''));
         $div = new \hemio\html\Div;
         $div->addInheritableAppendage('key', 'existing-value');
         $doc->getHtml()->getBody()->addChild($div);
         $doc->addInheritableAppendage('key', 'overwritten-value');
 
-        $this->assertEquals('existing-value', $div->getInheritableAppendage('key'));
+        $this->assertEquals('existing-value',
+                            $div->getInheritableAppendage('key'));
     }
-
 }

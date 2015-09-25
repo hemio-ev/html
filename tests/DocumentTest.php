@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Copyright (C) 2014 Michael Herold <quabla@hemio.de>
  *
@@ -23,25 +22,29 @@
  *
  * @author Michael Herold <quabla@hemio.de>
  */
-class DocumentTest extends Helpers {
+class DocumentTest extends Helpers
+{
 
-    function testPlain() {
+    function testPlain()
+    {
         $doc = new hemio\html\Document(new hemio\html\Str('Title <> "'));
         $this->_assertEqualsXmlFile($doc, 'documentPlain.html');
     }
 
-    function testBasic() {
+    function testBasic()
+    {
         $doc = new hemio\html\Document(new hemio\html\Str('Basic test'));
         $doc->getHtml()->getHead()->addMeta('author', 'Author Name "');
 
         $this->_assertEqualsXmlFile($doc, 'documentBasic.html');
     }
 
-    function testUnicode() {
+    function testUnicode()
+    {
         $doc = new hemio\html\Document(new hemio\html\Str('ת—א'));
-        $doc->getHtml()->getHead()->addMeta('author', '‏أبو زيد حنين بن إسحاق العبادي');
+        $doc->getHtml()->getHead()->addMeta('author',
+                                            '‏أبو زيد حنين بن إسحاق العبادي');
 
         $this->_assertEqualsXmlFile($doc, 'documentUnicode.html');
     }
-
 }

@@ -8,15 +8,18 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/semantics.html#the-html-element
  */
-class Html extends Abstract_\ElementContent {
+class Html extends Abstract_\ElementContent
+{
 
     use Trait_\DefaultElementContent;
 
-    public static function tagName() {
+    public static function tagName()
+    {
         return 'html';
     }
 
-    function __construct(Interface_\ContentModelText $objTitleContent) {
+    function __construct(Interface_\ContentModelText $objTitleContent)
+    {
         $this['_HEAD'] = new Head($objTitleContent);
         $this['_BODY'] = new Body();
     }
@@ -25,7 +28,8 @@ class Html extends Abstract_\ElementContent {
      *
      * @return Head
      */
-    public function getHead() {
+    public function getHead()
+    {
         return $this['_HEAD'];
     }
 
@@ -33,7 +37,8 @@ class Html extends Abstract_\ElementContent {
      *
      * @param Head $objHead
      */
-    public function setHead(Head $objHead) {
+    public function setHead(Head $objHead)
+    {
         $this['_HEAD'] = $objHead;
     }
 
@@ -41,7 +46,8 @@ class Html extends Abstract_\ElementContent {
      *
      * @return Body
      */
-    public function getBody() {
+    public function getBody()
+    {
         return $this['_BODY'];
     }
 
@@ -49,12 +55,13 @@ class Html extends Abstract_\ElementContent {
      *
      * @param Body $objBody
      */
-    public function setBody(Body $objBody) {
+    public function setBody(Body $objBody)
+    {
         $this['_BODY'] = $objBody;
     }
 
-    public function blnIsBlock() {
+    public function blnIsBlock()
+    {
         return true;
     }
-
 }

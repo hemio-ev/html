@@ -11,7 +11,8 @@ namespace hemio\html\Interface_;
  * @url http://www.w3.org/TR/html5/dom.html#text-content
  * @author Michael Herold <quabla@hemio.de>
  */
-interface ContentModelText extends ContentModel {
+interface ContentModelText extends ContentModel
+{
 
     /**
      * @return string
