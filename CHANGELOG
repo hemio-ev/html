@@ -1,4 +1,4 @@
-v0.2.0-unreleased
+v0.2.0
   - Adds support for PHP 7
   - Changes class name html\String to html\Str for PHP 7 compatibility
   - Fixes violations of coding standards
