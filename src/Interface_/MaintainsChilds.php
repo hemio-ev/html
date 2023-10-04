@@ -6,7 +6,7 @@ namespace hemio\html\Interface_;
  * Html elements which can have child elements (e.g. {@link ElementContent}) or
  *  elements which collect elements (e.g. {@link \form\Container}).
  *
- * @author Michael Herold <quabla@hemio.de>
+ * @author Sophie Herold <sophie@hemio.de>
  */
 interface MaintainsChilds extends \ArrayAccess, \RecursiveIterator, \Countable,
  MaintainsAppendages

@@ -9,7 +9,7 @@ namespace hemio\html\Interface_;
  * contain control characters other than space characters.
  *
  * @url http://www.w3.org/TR/html5/dom.html#text-content
- * @author Michael Herold <quabla@hemio.de>
+ * @author Sophie Herold <sophie@hemio.de>
  */
 interface ContentModelText extends ContentModel
 {

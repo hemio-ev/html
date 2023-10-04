@@ -2,13 +2,15 @@
     "name": "hemio/html",
     "type": "library",
     "description": "Object oriented HTML5 library",
-    "keywords": ["html"],
-    "homepage": "http://github.com/qua-bla/html",
+    "keywords": [
+        "html"
+    ],
+    "homepage": "http://github.com/hemio-ev/html",
     "license": "GPL-3.0+",
     "authors": [
         {
-            "name": "Michael Herold",
-            "email": "quabla@hemio.de"
+            "name": "Sophie Herold",
+            "email": "sophie@hemio.de"
         }
     ],
     "require": {

@@ -8,7 +8,7 @@ namespace hemio\html\Trait_;
  *
  * @uses MaintainsChilds DefaultElementContent implements defaults for
  * more element specific methods (e.g. <code>isValidChild()</code>) required by MaintainsChilds
- * @author Michael Herold <quabla@hemio.de>
+ * @author Sophie Herold <sophie@hemio.de>
  */
 trait DefaultElementContent
 {

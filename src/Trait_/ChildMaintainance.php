@@ -9,7 +9,7 @@ namespace hemio\html\Trait_;
  *
  * @uses MaintainsChilds ChildMaintainance is the recommended
  * implementation from most of MaintainsChilds requirements
- * @author Michael Herold <quabla@hemio.de>
+ * @author Sophie Herold <sophie@hemio.de>
  * @todo Cleanup
  */
 trait ChildMaintainance
