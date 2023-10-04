@@ -1,9 +1,11 @@
 <?php
 #require 'vendor/autoload.php';
 
-class LoadAllClasses extends PHPUnit_Framework_TestCase
+class LoadAllClassesTest extends \PHPUnit\Framework\TestCase
 {
-
+    /**
+    * @doesNotPerformAssertions
+    */
     public function test()
     {
         foreach (new RecursiveIteratorIterator(

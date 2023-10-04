@@ -8,7 +8,7 @@ namespace hemio\html;
  * @since version 1.0
  * @url http://www.w3.org/TR/html5/embedded-content-0.html#the-object-element
  */
-class Object extends Abstract_\ElementContent implements Interface_\Submittable
+class Object_ extends Abstract_\ElementContent implements Interface_\Submittable
 {
 
     use Trait_\Submittable,

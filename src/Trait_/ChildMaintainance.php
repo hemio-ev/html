@@ -38,7 +38,7 @@ trait ChildMaintainance
      *
      * @return integer
      */
-    public function count()
+    public function count(): int
     {
         return count($this->arrChilds);
     }
@@ -48,7 +48,7 @@ trait ChildMaintainance
      * @param mixed $offset
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return array_key_exists($offset, $this->arrChilds);
     }
@@ -58,7 +58,7 @@ trait ChildMaintainance
      * @param mixed $offset
      * @return Interface_\HtmlCode
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->arrChilds[$offset];
     }
@@ -68,7 +68,7 @@ trait ChildMaintainance
      * @param mixed $offset
      * @param Interface_\HtmlCode $value
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if ($this->isValidChild($value) || $value instanceof \hemio\html\Nothing) {
             if ($offset === null)
@@ -87,7 +87,7 @@ trait ChildMaintainance
      *
      * @param type $offset
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->arrChilds[$offset]);
     }
@@ -172,37 +172,37 @@ trait ChildMaintainance
         }
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return current($this->arrChilds) !== false;
     }
 
-    public function hasChildren()
+    public function hasChildren(): bool
     {
         return $this->current() instanceof \RecursiveIterator;
     }
 
-    public function next()
+    public function next(): void
     {
         next($this->arrChilds);
     }
 
-    public function current()
+    public function current(): mixed
     {
         return current($this->arrChilds);
     }
 
-    public function getChildren()
+    public function getChildren(): ?\RecursiveIterator
     {
         return $this->current();
     }
 
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->arrChilds);
     }
 
-    public function key()
+    public function key(): mixed
     {
         return key($this->arrChilds);
     }
